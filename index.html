@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ana Gondin's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap');
+    </style>
+       
+</head>
+<script>
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll("#menuNav a");
+
+    window.addEventListener("scroll", () => {
+        let current = "";
+        sections.forEach((section) => {
+            const sectionTop = section.offsetTop - 130;
+            const sectionHeight = section.clientHeight;
+            if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+                current = section.getAttribute("id");
+            }
+        });
+
+        navLinks.forEach((link) => {
+            link.classList.remove("active");
+            if (link.getAttribute("href").includes(current)) {
+                link.classList.add("active");
+            }
+        });
+    });
+</script>
+
+<body>
+    <header>
+    <nav id="menuNav">
+        <ul id="menu">
+            <li><a href="#sobre">Desafio Criativo</a></li>
+            <li><a href="#formacao">Faça com o que você tem</a></li>
+            <li><a href="#projetos">Escreva o livro que você quer ler</a></li>
+            <li><a href="#versoes">Seja Legal</a></li>
+            <li><a href="#experiencia">Saiba terminar</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <main>
+
+        <section id="secSobre">
+            <div id="sobre">
+                <img src="images/profile.jpeg" id="profilepic">
+                <div id="sobreTexto">
+                <h3 class="sobreP">DESAFIO CRIATIVO | ROUBE COMO UM ARTISTA</h3>
+                <h3 class="sobreP">manifesto de autenticidade</h3>
+                </div>
+            </div>
+        </section>
+        <section id="formacao">
+            <h2 class="titulo">Roube como um Artista | Faça com o que você tem</h2>
+            <h3>Ser autêntico não é ignorar as influências, mas sim escolher conscientemente
+        o que nos inspira e transformar isso com nossa própria voz.</h3>
+            <section id="galeriaCriativa">
+        <div class="galeria-desconstruida">
+            <img src="images/ana2.png" alt="Inspiração 2" class="small rotate-right shadow">
+            <img src="images/pintura1.jpg" alt="Inspiração 1" class="rotate-left">
+            <img src="images/pintura2.jpg" alt="Inspiração 2" class="small">
+            <img src="images/pintura3.jpg" alt="Inspiração 3" class="big rotate-right shadow">
+            <img src="images/pintura4.jpg" alt="Inspiração 4" class="horizontal rotate-right shadow">
+            <img src="images/ana1.png" alt="Inspiração 2" class="small rotate-left" >
+        
+        </div>
+</section>
+        </section>
+        <section id="projetos">
+    <h2 class="titulo">Escreva o livro que você quer ler</h2>
+    <div class="projeto">
+        <h3><i class="bi bi-github"></i>Produza aquilo que você sente falta no mundo.</h3>
+        <p>Lela Brandão - Lela Brandão Co</p>
+
+        <!-- Galeria Lela Brandão -->
+        <div class="galeria">
+            <img src="images/LELA1.png" alt="Lela Brandão 1">
+            <img src="images/LELA2.png" alt="Lela Brandão 2">
+            <img src="images/LELA3.jpg" alt="Lela Brandão 3">
+        </div>
+    </div>
+
+<div class="projeto">
+    <h3>Combine referências e interesses únicos para criar algo pessoal e relevante.</h3>
+
+    <!-- Galeria alinhada como a da Lela Brandão -->
+    <div class="galeriamenor">
+            <img src="images/NATH.jpg" alt="Nath Araújo" class="galeriamenor">
+
+            <img src="images/liniker (2).jpg" alt="Beta Boechat" class="galeriamenor">
+
+            <img src="images/VANESSA.png" alt="Vanessa Macch" class="galeriamenor">
+
+            <img src="images/liniker (3).jpg" alt="Beta Boechat" class="galeriamenor">
+
+            <img src="images/BETA.png" alt="Beta Boechat" class="galeriamenor">
+
+            <img src="images/liniker (1).jpg" alt="Beta Boechat" class="galeriamenor">
+
+    </div>
+</div>
+
+</section>
+
+ <section id="versoes">
+    <h2 class="titulo">Seja legal (o mundo é uma cidade pequena)</h2>
+            <h3>É PRECISO SER ETERNA EM ALGUMA MEMÓRIA</h3>
+        <div class="galeria">
+            <img src="images/inspo1.jpeg" alt="Inspiração 2">
+            <img src="images/inspo2.jpeg" alt="Inspiração 1">
+            <img src="images/inspo3.jpeg" alt="Inspiração 2">
+        
+        </div>
+        <h3>Tenha uma pessoa por perto que te apoie incondicionalmente.</h3>
+         <div class="galeria">
+            <img src="images/rafik1.jpg" alt="Inspiração 2">
+            <img src="images/rafik2.jpg" alt="Inspiração 1">
+            <img src="images/rafik3.jpeg" alt="Inspiração 2">
+        
+        </div>
+        
+        </section>
+        
+
+        <section id="experiencia" class="experiencia-container">
+    <div class="video-container">
+            <video controls width="80%">
+            <source src="images/ratinho.mp4" type="video/mp4">
+            Seu navegador não suporta vídeo.
+            </video>
+    </div>
+    <div class="texto-container">
+
+        <h2 class="titulo">Ato Final - Criatividade também é saber terminar</h2>
+        <h3>Nem toda ideia vai se tornar uma obra-prima, e tudo bem.</h3>
+        <h3>Termine os projetos, publique, siga em frente.</h3>
+    </div>
+    </section>
+
+       
+    </main>
+    <footer>
+        <p>&copy; 2025 Ana Gondin</p>
+    </footer>
+    
+    <script src="script.js"></script>
+
+</body>
+</html>
