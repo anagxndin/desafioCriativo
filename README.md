@@ -1,0 +1,1 @@
+Desafio proposto na Trilha de Aprendizagem da Sankhya, no qual deveríamos criar algo com base nos ensimaentos do livro "Roube como Um Artista". Decidi por fazer uma página em HTML e CSS que representa as fontes da minha criatividade e autenticidade.
